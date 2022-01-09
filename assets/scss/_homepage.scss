@@ -1,0 +1,129 @@
+.t1 {
+    margin-bottom: -1rem;
+}
+.t2 {
+    margin-bottom: 0.5rem;
+}
+
+.home-header {
+    width: 100%;
+    height: 80vh;
+    position: relative;
+
+    .homehands {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+        border-radius: 28px;
+    }
+}
+
+.grid-box {
+    width: 416px;
+
+    .col {
+        // width: 221.78px;
+        height: 180px;
+        font-size: 1.125em;
+        padding: 1rem;
+        line-height: 3rem;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: start;
+
+        span {
+            font-size: 3.4375em;
+        }
+    }
+
+    $shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
+
+    .box-yellow {
+        position: absolute;
+
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: -270px;
+
+        background: $primary;
+        mix-blend-mode: multiply;
+        
+        box-shadow: $shadow;
+        -o-box-shadow: $shadow;
+        -ms-box-shadow: $shadow;
+        -moz-box-shadow: $shadow;
+        -webkit-box-shadow: $shadow;   
+    }
+    .box-black {
+        background: $dark;
+        color: white;
+        box-shadow: $shadow;
+        -o-box-shadow: $shadow;
+        -ms-box-shadow: $shadow;
+        -moz-box-shadow: $shadow;
+        -webkit-box-shadow: $shadow;   
+    }
+    .box-transparent {
+        background: transparent;
+    }
+    .box-white {
+        background: white;
+        box-shadow: $shadow;
+        -o-box-shadow: $shadow;
+        -ms-box-shadow: $shadow;
+        -moz-box-shadow: $shadow;
+        -webkit-box-shadow: $shadow;        
+    }
+}
+
+.aa {
+    background: url("../img/map.svg");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 80vh;
+}
+
+.timeline {
+    background: $light-grey5;
+}
+
+.border-l-primary {
+    border-left: 2px solid $primary;
+
+    &.t {
+        border-left: 2px solid transparent;
+    }
+}
+
+.primary-dot {
+    width: 24px;
+    height: 24px;
+    background: $primary;
+
+    position: absolute;
+    top: 0;
+    left: -13px;
+    border-radius: 50%;
+}
+
+.grid-photo {
+    padding: 0 5rem 10rem 5rem;
+    .col {
+        height: 345px;
+        overflow: hidden;
+
+        &:nth-child(2) {
+            border-top-right-radius: 28px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}

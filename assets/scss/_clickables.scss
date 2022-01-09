@@ -1,0 +1,387 @@
+.brand {
+    font-weight: 600;
+    font-size: 1.75em;
+}
+
+.links {
+    font-weight: 500;
+    margin: 0 1rem;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+
+    border-bottom: 2px solid transparent;
+
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+
+    &:hover,
+    &.active {
+        border-bottom: 2px solid $primary;
+        &.username {
+            border-bottom: 2px solid transparent;
+        }
+    }
+
+    &.username {
+        max-width: 150px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    &.circle {
+        width: 36px;
+        height: 36px;
+        padding: 5px;
+        position: relative;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        background: $light-grey4;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .icon {
+            width: 20px;
+            height: auto;
+        }
+
+        &:hover {
+            box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        &:active {
+            box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        &-photo {
+            width: 36px;
+            height: 36px;
+
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+
+                object-fit: cover;
+            }
+        }
+
+        .badge {
+            position: absolute;
+
+            width: 15px;
+            height: 15px;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+
+            right: -2px;
+            top: -2px;
+
+            background: red;
+            display: block;
+
+            &:empty {
+                display: block;
+            }
+        }
+    }
+}
+
+.sub-link {
+    padding: 0 0.75rem;
+    width: 100%;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    text-align: left;
+
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+
+    &:hover {
+        position: relative;
+        background: $primary;
+
+        a {
+            border: none;
+        }
+
+        &::before {
+            content: " ";
+            pointer-events: none;
+            position: absolute;
+            border: 2px solid $primary !important;
+            border-radius: 8px;
+
+            top: -2px;
+            right: -2px;
+            left: -2px;
+            bottom: -2px;
+        }
+    }
+
+    a {
+        padding: 0.5rem;
+
+        display: block;
+        width: 100%;
+        border-bottom: 0.5px solid $light-grey;
+    }
+
+    &:last-child {
+        a {
+            border: none;
+        }
+    }
+}
+
+.footer {
+    color: white;
+
+    .sub-title {
+        font-weight: 600;
+        font-size: 1.125em !important;
+
+        padding-bottom: 1rem;
+    }
+
+    .footer-links {
+        margin-bottom: 1rem;
+        font-size: 0.875em;
+
+        color: $light-grey2;
+    }
+
+    .iconify {
+        font-size: 18px;
+    }
+
+    .send-icon {
+        position: absolute;
+        top: 50%;
+        right: 4px;
+        transform: translateY(-50%);
+    }
+}
+
+.auth-btn {
+    width: 100%;
+    height: 50px;
+    background: $primary;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+    border: 2px solid $primary;
+
+    font-size: 1.125em;
+    font-weight: 600;
+    text-transform: capitalize;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-tabs {
+    .nav-link {
+        border: 0 !important;
+        padding: 0.75rem 4rem;
+
+        font-size: 1.5em;
+        font-weight: 600;
+
+        color: $dark-grey;
+
+        &.active {
+            border-bottom: 4px solid $primary !important;
+            color: $dark;
+        }
+    }
+}
+
+.vertical-tab {
+    display: flex;
+    flex-direction: column;
+
+    .nav-link {
+        color: $dark;
+        padding: 1.5rem 1.75rem;
+        text-align: left;
+        background: transparent;
+        border: 0;
+        border-bottom: 0.5px solid $light-grey;
+        margin: 0 1rem;
+        position: relative;
+        font-weight: 500;
+
+        display: flex;
+        align-items: center;
+        
+        .icon {
+            width: 32px;
+            height: 32px;
+            margin-right: 1rem;
+            color: $dark-grey;
+            
+            svg path {
+                fill: $dark-grey;
+            }
+        }
+        &.active {
+            background: $brighter-primary;
+            padding: 1.5rem 2.75rem;
+            margin: 0;
+            
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                width: 6px;
+                background: $primary;
+
+                border-radius: 0 10px 10px 0;
+            }
+
+            svg path {
+                fill: $primary;
+                color: $primary;
+            }
+        }
+        
+        &:last-child {
+            border-bottom: 0.5px solid transparent;
+        }
+    }
+}
+
+.course-card-title {
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+
+    $shadow: 0px 0px 16px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+    -ms-box-shadow: $shadow;
+    -o-box-shadow: $shadow;
+    box-shadow: $shadow;
+
+    text-align: left;
+    border: none;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+    background: white;
+
+    width: 100%;
+    cursor: pointer;
+
+    &.smaller-shadow {
+        $shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+        -webkit-box-shadow: $shadow;
+        -moz-box-shadow: $shadow;
+        -ms-box-shadow: $shadow;
+        -o-box-shadow: $shadow;
+        box-shadow: $shadow;
+    }
+
+    &.active {
+        background: $primary;
+    }
+
+    &.question {
+        cursor: initial;
+    }
+    &.option {
+        width: auto;
+        max-width: 100%;
+
+        font-weight: 400;
+        margin-right: 0.75rem;
+    }
+
+    &.collapsable {
+        .head {
+            position: relative;
+
+            .iconify {
+                color: $primary;
+                font-size: 1.75em;
+                margin-right: 1rem;
+            }
+
+            .minus {
+                display: inline-block;
+                transform: rotate(90deg);
+
+                -webkit-transition: all 0.2s ease;
+                -moz-transition: all 0.2s ease;
+                -ms-transition: all 0.2s ease;
+                -o-transition: all 0.2s ease;
+                transition: all 0.2s ease;
+            }
+            .plus {
+                opacity: 1;
+                position: absolute;
+
+                top: 0;
+                left: 0;
+
+                -webkit-transition: all 0.2s ease;
+                -moz-transition: all 0.2s ease;
+                -ms-transition: all 0.2s ease;
+                -o-transition: all 0.2s ease;
+                transition: all 0.2s ease;
+            }
+
+            &.active {
+                .minus {
+                    transform: rotate(0);
+                }
+                .plus {
+                    opacity: 0;
+                    position: absolute;
+                }
+            }
+        }
+
+        .body {
+            padding-top: 1rem;
+            padding-left: 1.5rem;
+            font-weight: 400;
+            display: none;
+
+            &.active {
+                display: block;
+            }
+
+            table {
+                color: $secondary-dark !important;
+
+                td {
+                    border: none;
+
+                    &:nth-child(2) {
+                        text-align: end;
+                    }
+                }
+
+                &.table-striped > tbody > tr:nth-of-type(odd) {
+                    color: $secondary-dark;
+                }
+            }
+        }
+    }
+}

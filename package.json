@@ -1,0 +1,23 @@
+{
+  "name": "ut-lomba",
+  "version": "1.0.0",
+  "description": "What is CodeIgniter finance #1\r ###################",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w assets/scss/ -o assets/src/css/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bijancot/ut-lomba.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bijancot/ut-lomba/issues"
+  },
+  "homepage": "https://github.com/bijancot/ut-lomba#readme",
+  "dependencies": {
+    "node-sass": "^6.0.1",
+    "sass": "^1.43.4"
+  }
+}

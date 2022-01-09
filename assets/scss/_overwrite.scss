@@ -1,0 +1,123 @@
+.fs-55 {
+    font-size: 3.4375em !important;
+}
+.fs-5 {
+    font-size: 1.125em !important;
+}
+
+.px-7 {
+    padding-left: 4.57rem !important;
+    padding-right: 4.57rem !important;
+}
+.ps-7 {
+    padding-left: 6rem !important;
+}
+.ps-11 {
+    padding-left: 8.225rem !important;
+}
+.mt-11 {
+    margin-top: 11rem !important;
+}
+
+@media (min-width: 1280px) {
+    .ps-10 {
+        padding-left: 6rem !important;
+    }
+}
+
+input::-ms-reveal,
+input::-ms-clear {
+    display: none;
+}
+
+
+$select-color: $dark;
+$select-background: white;
+$select-width: 100%;
+$select-height: 45px; 
+
+.select-hidden {
+    display: none;
+    visibility: hidden;
+}
+.select {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    font-size: 16px;
+    color: $select-color;
+    width: $select-width;
+    height: $select-height;
+
+    border-bottom: 1px solid $light-grey3;
+}
+.select-styled {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $select-background;
+    color: $secondary-dark;
+    padding: 8px;
+    padding-left: 0;
+    // @include transition(all 0.2s ease-in);
+    &:after {
+        content: "";
+        width: 0;
+        height: 0;
+        border: 7px solid transparent;
+        border-color: $select-color transparent transparent transparent;
+        position: absolute;
+        top: 16px;
+        right: 10px;
+    }
+    &:active,
+    &.active {
+        border-bottom: 1px solid $primary;
+        &:after {
+            top: 9px;
+            border-color: transparent transparent $select-color transparent;
+        }
+    }
+}
+
+.select-options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    z-index: 999;
+    margin: 0;
+    margin-top: 8px;
+    max-height: 200px;
+    padding: 0;
+    overflow-y: scroll;
+    list-style: none;
+    border-radius: 15px;
+    background-color: $select-background;
+
+    $shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+    -ms-box-shadow: $shadow;
+    -o-box-shadow: $shadow;
+    box-shadow: $shadow;
+
+    li {
+        margin: 0;
+        padding: 12px;
+        text-indent: 15px;
+        border-top: $select-background;
+        // @include transition(all 0.15s ease-in);
+        &:hover {
+            color: white;
+            background: $primary;
+        }
+        &[rel="hide"] {
+            color: $secondary-dark;
+            display: none;
+        }
+    }
+}
